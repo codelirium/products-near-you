@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue";
+}
+
+#map {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#controls {
+  z-index: 1000;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#controls .radius, #controls .count, #controls .tags {
+  display: inline-block;
+  vertical-align: top;
+  width: 120px;
+}
+
+#controls .radius .selectize-input,
+#controls .count .selectize-input,
+#controls .tags .selectize-input {
+  border-color: rgba(0, 0, 0, .4);
+}
+
+#controls .tags {
+  width: 250px;
+}
+
+#controls .search {
+  padding: 0;
+  vertical-align: top;
+  display: inline-block;
+  border: 1px solid #d0d0d0;
+  text-decoration: none;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3);
+  background-color: #1b9dec;
+  background-image: linear-gradient(to bottom, #1da7ee, #178ee9);
+  border-color: #1A6BA9;
+  color: white;
+  font-size: 13px;
+  width: 100px;
+  height: 36px;
+  cursor: pointer;
+}
+
+#controls .search:hover {
+  background-image: linear-gradient(to bottom, #1da7ee, #1481d5);
+  border-color: #1A66A0;
+}
+
+#controls .search:focus {
+  outline: none;
+}
+
+#controls .search:active {
+  background-image: linear-gradient(to bottom, #1e9ada, #1994f2);
+}

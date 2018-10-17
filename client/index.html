@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.default.min.css" rel="stylesheet" />
+    <link href="//api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css" rel="stylesheet" />
+    <link href="map.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="map" width=400 height=400></div>
+    <div id="controls">
+      <select class="count">
+        <option value="10">10 products</option>
+        <option value="20">20 products</option>
+        <option value="50">50 products</option>
+      </select>
+      <select class="radius">
+        <option value="100">100m</option>
+        <option value="500">500m</option>
+        <option value="1000">1000m</option>
+        <option value="2000">2000m</option>
+      </select>
+      <input placeholder="Add tags..." type="text" class="tags"></input>
+      <button class="search">Search</button>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//rawgithub.com/hij1nx/EventEmitter2/master/lib/eventemitter2.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.js"></script>
+    <script src="//api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>
