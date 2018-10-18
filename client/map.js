@@ -157,7 +157,33 @@
     this.prefs = prefs;
 
     this.search = function(cb) {
-      // TODO: Implement this.
+
+        // TODO: position where you are
+
+        const reqParams = {
+            count: this.prefs.count,
+            latitude: this.prefs.position.lat,
+            longitude: this.prefs.position.lng,
+            radius: this.prefs.radius,
+            tags: this.prefs.tags.join()
+        };
+
+        $.ajax({
+
+            url: "http://localhost:5000/search",
+            data: reqParams,
+            dataType: 'json',
+            timeout: 5000
+
+        }).done(function(products) {
+
+            return cb(null, products);
+
+        }).fail(function() {
+
+            cb('Error locating products ...', null);
+
+        });
     };
   };
 

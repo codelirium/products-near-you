@@ -6,4 +6,4 @@ itsdangerous==0.24
 py==1.4.27
 pytest==2.7.0
 wsgiref==0.1.2
-pysqlite==2.8.3
+pandas==0.23.4
