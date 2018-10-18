@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from flask import Blueprint, current_app, request
+from flask import Blueprint, current_app, request, Response
 from math import radians, cos, sin, asin, sqrt
 import pandas as pd
 
@@ -101,7 +101,7 @@ def search():
     products = is_nearby(products, request.args['longitude'], request.args['latitude'], request.args['radius'])
     products = topmost_popular(products, request.args['count'])
     products = to_json(products)
-    return products
+    return Response(products, status=200, mimetype='application/json')
 
 
 @api.after_request
